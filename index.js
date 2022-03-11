@@ -9,7 +9,7 @@ const client = new Discord.Client({
         "GUILD_MEMBERS"
     ]
 })
-let prefix = "k.";
+let prefix = "k-";
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
     client.user.setActivity("CrystalGem", {
@@ -18,14 +18,13 @@ client.on("ready", () => {
     })
 })
 client.on("messageCreate", (message) => {
-    if (message.content.startsWith(prefix) && message.content == !prefix + "game") {
-        const args = message.content.slice(prefix.length).trim().split(/ +/g)
+    if (message.content.startsWith(prefix)) {
         const options = {
             method: 'POST',
             url: 'https://waifu.p.rapidapi.com/path',
             qs: {
                 user_id: `${message.author.id}`,
-                message: `${args}`,
+                message: `${message.content}`,
                 from_name: `${message.author.username}`,
                 to_name: `${client.user}`,
                 situation: 'Kora đang nói chuyện với bạn',
@@ -35,7 +34,7 @@ client.on("messageCreate", (message) => {
             headers: {
                 'content-type': 'application/json',
                 'x-rapidapi-host': 'waifu.p.rapidapi.com',
-                'x-rapidapi-key': `${process.env.RAPIAPI}`,
+                'x-rapidapi-key': process.env.RAPIAPI,
                 useQueryString: true
             },
             body: {},
@@ -47,9 +46,9 @@ client.on("messageCreate", (message) => {
 
             message.reply(body);
         });
-        if (message.content == prefix + "game") {
-            message.reply("Bạn muốn chơi game à? Ý hay đấy tôi có 1 game cực hay luôn đó là CrystalGem sao bạn không thử xem? https://crystalgem.cf/")
-        }
+    }
+    if (message.content == prefix + "game") {
+        message.reply("Bạn muốn chơi game à? Ý hay đấy tôi có 1 game cực hay luôn đó là CrystalGem sao bạn không thử xem? https://crystalgem.cf/")
     }
 })
 client.login(process.env.TOKEN)
