@@ -10,9 +10,12 @@ const client = new Discord.Client({
     ]
 })
 let prefix = "k.";
-client.user.setActivity("CrystalGem", { type: 'PLAYING' }, { url: 'https://crystalgem.cf/' })
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`)
+    client.user.setActivity("CrystalGem", {
+        type: 'PLAYING',
+        url: 'https://crystalgem.cf/'
+    })
 })
 client.on("messageCreate", (message) => {
     if (message.content.startsWith(prefix) && message.content == !prefix + "game") {
