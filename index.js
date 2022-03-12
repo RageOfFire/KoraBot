@@ -47,8 +47,8 @@ client.on("messageCreate", (message) => {
             message.reply(body);
         });
     }
-    if (message.content == prefix + "game") {
-        message.reply("Bạn muốn chơi game à? Ý hay đấy tôi có 1 game cực hay luôn đó là CrystalGem sao bạn không thử xem? https://crystalgem.cf/")
+    if (message.mentions.has(client.user.id)) {
+        message.reply("Này bạn ping tôi à? Lỡ ping rồi thì chơi game này đi cực hay luôn đó là CrystalGem thử xem tại đây? https://crystalgem.cf/\nBất kì khi nào rảnh quay lại nói chuyện với tôi qua k-chat nha.")
     }
 })
 client.login(process.env.TOKEN)
