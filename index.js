@@ -48,11 +48,11 @@ client.on("messageCreate", (message) => {
         });
     }
     if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
-    if (message.mentions.has(client.user.id)) {
-        message.reply("Này bạn ping tôi à? Lỡ ping rồi thì chơi game này đi cực hay luôn đó là CrystalGem thử xem tại đây? https://crystalgem.cf/\nBất kì khi nào rảnh quay lại nói chuyện với tôi qua k-chat nha.")
-    }
     if (message.mentions.has(client.user.id) && message.type == "REPLY") {
         message.reply("Bạn đã bị rickroll xin chúc mừng! https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif")
+    }
+    if (message.mentions.has(client.user.id) && message.type !== "REPLY") {
+        message.reply("Này bạn ping tôi à? Lỡ ping rồi thì chơi game này đi cực hay luôn đó là CrystalGem thử xem tại đây? https://crystalgem.cf/\nBất kì khi nào rảnh quay lại nói chuyện với tôi qua k-chat nha.")
     }
 })
 client.login(process.env.TOKEN)
