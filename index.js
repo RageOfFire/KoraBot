@@ -23,10 +23,10 @@ client.on("messageCreate", (message) => {
             method: 'POST',
             url: 'https://waifu.p.rapidapi.com/path',
             qs: {
-                user_id: `${message.author.id}`,
-                message: `${message.content}`,
-                from_name: `${message.author.username}`,
-                to_name: `${client.user}`,
+                user_id: `<@${message.author.id}>`,
+                message: `${message.content.slice(prefix.length)}`,
+                from_name: `<@${message.author.username}>`,
+                to_name: `<@${client.user.username}>`,
                 situation: 'Kora đang nói chuyện với bạn',
                 translate_from: 'auto',
                 translate_to: 'vn'
