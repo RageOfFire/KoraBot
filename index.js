@@ -47,6 +47,7 @@ client.on("messageCreate", (message) => {
             message.reply(body);
         });
     }
+    if (message.content.includes("@here") || message.content.includes("@everyone") || message.type == "REPLY") return false;
     if (message.mentions.has(client.user.id)) {
         message.reply("Này bạn ping tôi à? Lỡ ping rồi thì chơi game này đi cực hay luôn đó là CrystalGem thử xem tại đây? https://crystalgem.cf/\nBất kì khi nào rảnh quay lại nói chuyện với tôi qua k-chat nha.")
     }
