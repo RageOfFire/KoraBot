@@ -52,7 +52,7 @@ client.on("messageCreate", (message) => {
         message.reply("Này bạn ping tôi à? Lỡ ping rồi thì chơi game này đi cực hay luôn đó là CrystalGem thử xem tại đây? https://crystalgem.cf/\nBất kì khi nào rảnh quay lại nói chuyện với tôi qua k-chat nha.")
     }
     if (message.type == "REPLY") {
-        message.reply("Bạn đã bị rickroll xin chúc mừng! https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif")
+        message.send("Bạn đã bị rickroll xin chúc mừng! https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif")
     }
 })
 client.login(process.env.TOKEN)
