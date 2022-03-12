@@ -1,4 +1,4 @@
-# Simple AI DiscordBot using API
+# Simple chatting DiscordBot using API
 this bot Is a small bot that allow you to chatting with it
 HOW TO USE:
 - 1.create a .env file in main where have index.js file
