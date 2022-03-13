@@ -28,7 +28,7 @@ client.on("messageCreate", (message) => {
                 from_name: `<@${message.author.username}>`,
                 to_name: `<@${client.user.username}>`,
                 situation: 'Kora đang nói chuyện với bạn',
-                translate_from: 'auto',
+                translate_from: 'en vn',
                 translate_to: 'vn'
             },
             headers: {
