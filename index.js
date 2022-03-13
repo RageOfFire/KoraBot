@@ -18,7 +18,7 @@ client.on("ready", () => {
     })
 })
 client.on("messageCreate", (message) => {
-    if (message.content.startsWith(prefix) || (message.mentions.has(client.user.id) && message.type == "REPLY")) {
+    if (message.content.startsWith(prefix) || (message.mentions.has(client.user.id) && message.type == "REPLY" && !message.content.startsWith(prefix))) {
         const options = {
             method: 'POST',
             url: 'https://waifu.p.rapidapi.com/path',
