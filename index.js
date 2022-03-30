@@ -1,8 +1,17 @@
 const Discord = require("discord.js");
 const request = require('request');
+const Sequelize = require('sequelize');
 const { MessageEmbed } = require('discord.js');
 const { hyperlink } = require('@discordjs/builders');
 require("dotenv").config()
+
+const sequelize = new Sequelize('database', 'user', 'password', {
+	host: 'localhost',
+	dialect: 'sqlite',
+	logging: false,
+	// SQLite only
+	storage: 'kora.sqlite',
+});
 
 const client = new Discord.Client({
     intents: [
@@ -11,16 +20,45 @@ const client = new Discord.Client({
         "GUILD_MEMBERS"
     ]
 })
+
+const Points = sequelize.define('KoraPoint', {
+    nameid: {
+        type: Sequelize.INTEGER,
+        unique: true,
+    },
+    name: {
+        type: Sequelize.STRING,
+        unique: true,
+    },
+    points: {
+        type: Sequelize.INTEGER,
+        defaultValue: 1,
+        allowNull: false,
+    },
+});
+
 let prefix = "k-";
 client.on("ready", () => {
+    Points.sync();
     console.log(`Logged in as ${client.user.tag}`)
     client.user.setActivity("CrystalGem", {
         type: 'PLAYING',
         url: 'https://crystalgem.cf/'
     })
 })
-client.on("messageCreate", (message) => {
+
+client.on("messageCreate", async (message) => {
     if (message.content.startsWith(prefix) || (message.mentions.has(client.user.id) && message.type == "REPLY" && !message.content.startsWith(prefix))) {
+        const pointDB = await Points.findOne({ where: { 'nameid': message.author.id } });
+        if (pointDB != null) {
+            await Points.increment('points', {by: 1, where: {'nameid': message.author.id}});
+        }
+        else {
+            await Points.create({
+                nameid: message.author.id,
+                name: message.author.tag,
+            });
+        }
         const options = {
             method: 'POST',
             url: 'https://waifu.p.rapidapi.com/path',
@@ -53,7 +91,8 @@ client.on("messageCreate", (message) => {
                 .setDescription(body)
                 .setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
                 .addFields(
-                    { name: 'Đang trò chuyện với', value: `${message.author.toString()}` },
+                    { name: 'Đang trò chuyện với', value: `🔊 ${message.author.toString()} 🔊`, inline: true },
+                    { name: 'Điểm tương tác', value: `🧡 ${pointDB.points} 🧡`, inline: true },
                 )
                 .setTimestamp()
                 .setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
