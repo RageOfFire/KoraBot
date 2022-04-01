@@ -5,13 +5,7 @@ const { MessageEmbed } = require('discord.js');
 const { hyperlink } = require('@discordjs/builders');
 require("dotenv").config()
 
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	// SQLite only
-	storage: 'kora.sqlite',
-});
+const sequelize = new Sequelize(process.env.POSTGRESQL);
 
 const client = new Discord.Client({
     intents: [
