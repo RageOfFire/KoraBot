@@ -5,7 +5,24 @@ const { MessageEmbed } = require('discord.js');
 const { hyperlink } = require('@discordjs/builders');
 require("dotenv").config()
 
-const sequelize = new Sequelize(process.env.POSTGRESQL);
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
+);
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Kết nối với cơ sở dữ liệu thành công');
+  })
+  .catch(err => {
+    console.error('Có sự cố khi kết nối với cơ sở dữ liệu:', err);
+  });
 
 const client = new Discord.Client({
     intents: [
@@ -17,7 +34,7 @@ const client = new Discord.Client({
 
 const Points = sequelize.define('KoraPoint', {
     nameid: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
         unique: true,
     },
     name: {
@@ -25,7 +42,7 @@ const Points = sequelize.define('KoraPoint', {
         unique: true,
     },
     points: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
         defaultValue: 1,
         allowNull: false,
     },
