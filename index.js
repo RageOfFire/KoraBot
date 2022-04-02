@@ -62,11 +62,11 @@ client.on("messageCreate", async (message) => {
     if (message.content.startsWith(prefix) || (message.mentions.has(client.user.id) && message.type == "REPLY" && !message.content.startsWith(prefix))) {
         const pointDB = await Points.findOne({ where: { 'nameid': message.author.id } });
         if (pointDB != null) {
-            await Points.increment('points', {by: 1, where: {'nameid': message.author.id}});
             superPoint = pointDB.points;
+            await Points.increment('points', {by: 1, where: {'nameid': message.author.id }});
         }
         else {
-            superPoint = 0;
+            superPoint = 1;
             await Points.create({
                 nameid: message.author.id,
                 name: message.author.tag,
@@ -78,10 +78,10 @@ client.on("messageCreate", async (message) => {
             qs: {
                 user_id: message.author.id,
                 message: message.content.slice(prefix.length),
-                from_name: message.author.toString(),
-                to_name: client.user.toString(),
-                situation: 'Kora đang nói chuyện với bạn',
-                translate_from: 'en vn',
+                from_name: message.author.username,
+                to_name: client.user.username,
+                situation: message.content.slice(prefix.length),
+                translate_from: 'auto',
                 translate_to: 'vn'
             },
             headers: {
