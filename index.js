@@ -62,11 +62,9 @@ client.on("messageCreate", async (message) => {
     if (message.content.startsWith(prefix) || (message.mentions.has(client.user.id) && message.type == "REPLY" && !message.content.startsWith(prefix))) {
         const pointDB = await Points.findOne({ where: { 'nameid': message.author.id } });
         if (pointDB != null) {
-            superPoint = pointDB.points;
             await Points.increment('points', {by: 1, where: {'nameid': message.author.id }});
         }
         else {
-            superPoint = 1;
             await Points.create({
                 nameid: message.author.id,
                 name: message.author.tag,
@@ -105,7 +103,7 @@ client.on("messageCreate", async (message) => {
                 .setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
                 .addFields(
                     { name: 'Đang trò chuyện với', value: `🔊 ${message.author.toString()} 🔊`, inline: true },
-                    { name: 'Điểm tương tác', value: `🧡 ${superPoint} 🧡`, inline: true },
+                    { name: 'Điểm tương tác', value: `🧡 ${pointDB != null ? pointDB.points : 0} 🧡`, inline: true },
                 )
                 .setTimestamp()
                 .setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
