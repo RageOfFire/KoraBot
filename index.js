@@ -43,7 +43,6 @@ const Points = sequelize.define('KoraPoint', {
     },
     points: {
         type: Sequelize.BIGINT,
-        defaultValue: 1,
         allowNull: false,
     },
 });
@@ -68,6 +67,7 @@ client.on("messageCreate", async (message) => {
             await Points.create({
                 nameid: message.author.id,
                 name: message.author.tag,
+                points: 1
             });
         }
         const options = {
@@ -103,7 +103,7 @@ client.on("messageCreate", async (message) => {
                 .setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
                 .addFields(
                     { name: 'Đang trò chuyện với', value: `🔊 ${message.author.toString()} 🔊`, inline: true },
-                    { name: 'Điểm tương tác', value: `🧡 ${pointDB != null ? pointDB.points : 0} 🧡`, inline: true },
+                    { name: 'Điểm tương tác', value: `🧡 ${pointDB != null ? pointDB.points : 1} 🧡`, inline: true },
                 )
                 .setTimestamp()
                 .setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
