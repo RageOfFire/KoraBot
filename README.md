@@ -1,6 +1,6 @@
 # KoraBot
 
-Simple chatting DiscordBot using API.
+* Simple chatting DiscordBot using API.
 
 ![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
 ![Discord](https://img.shields.io/discord/752171524919918672)
@@ -29,7 +29,7 @@ Simple chatting DiscordBot using API.
 
 ### Cài đặt
 
-```nodejs
+```sh
 npm i
 ```
 
@@ -40,7 +40,7 @@ npm i
 * Tạo 1 file **.env** ngay tại nơi có file **index.js**!
 * Trong file **.env**
 
-```env
+```sh
 TOKEN=TOKEN của bạn
 RAPIAPI=KEY API của bạn
 DATABASE_URL=url để kết nối với database của bạn (POSTGRESQL)
@@ -48,7 +48,7 @@ DATABASE_URL=url để kết nối với database của bạn (POSTGRESQL)
 
 * Chạy chương trình
 
-```nodejs
+```sh
 npm start
 ```
 
@@ -59,7 +59,7 @@ npm start
 
 ## Tác giả
 
-RageOfFire
+* [RageOfFire](https://github.com/RageOfFire)
 
 ## License
 
