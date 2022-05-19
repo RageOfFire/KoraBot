@@ -1,18 +1,16 @@
-![GitHub](https://img.shields.io/github/languages/top/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/discord/752171524919918672)
-![GitHub](https://img.shields.io/github/downloads/RageOfFire/KoraBot/total)
-![GitHub](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
-![GitHub](https://img.shields.io/github/followers/RageOfFire?style=social)
-![GitHub](https://img.shields.io/github/stars/RageOfFire/KoraBot?style=social)
-![GitHub](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
-
 # KoraBot
 
 Simple chatting DiscordBot using API.
+
+![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
+![Discord](https://img.shields.io/discord/752171524919918672)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
+![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
+![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
+![GitHub followers](https://img.shields.io/github/followers/RageOfFire?style=social)
+![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
+![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
 
 ## Mô tả
 
@@ -56,7 +54,8 @@ npm start
 
 ## Hỗ trợ
 
-![GitHub](https://img.shields.io/github/issues/RageOfFire/KoraBot)
+![GitHub issues](https://img.shields.io/github/issues/RageOfFire/KoraBot)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
 
 ## Tác giả
 
