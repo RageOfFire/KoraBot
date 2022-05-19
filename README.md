@@ -8,7 +8,7 @@ Simple chatting DiscordBot using API.
 ![GitHub last commit](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
 ![GitHub repo size](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
-![GitHub followers](https://img.shields.io/github/followers/RageOfFire?style=social)
+![GitHub followers](https://img.shields.io/github/followers/RageOfFire)
 ![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
 
