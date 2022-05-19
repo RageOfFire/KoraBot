@@ -1,14 +1,14 @@
-https://img.shields.io/github/languages/top/RageOfFire/KoraBot
-https://img.shields.io/discord/752171524919918672
-https://img.shields.io/github/downloads/RageOfFire/KoraBot/total
-https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot
-https://img.shields.io/github/last-commit/RageOfFire/KoraBot
-https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot
-https://img.shields.io/github/repo-size/RageOfFire/KoraBot
-https://img.shields.io/github/issues-pr/RageOfFire/KoraBot
-https://img.shields.io/github/followers/RageOfFire?style=social
-https://img.shields.io/github/stars/RageOfFire/KoraBot?style=social
-https://img.shields.io/github/package-json/v/RageOfFire/KoraBot
+![GitHub](https://img.shields.io/github/languages/top/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/discord/752171524919918672)
+![GitHub](https://img.shields.io/github/downloads/RageOfFire/KoraBot/total)
+![GitHub](https://img.shields.io/github/commit-activity/m/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/last-commit/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/languages/code-size/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/repo-size/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
+![GitHub](https://img.shields.io/github/followers/RageOfFire?style=social)
+![GitHub](https://img.shields.io/github/stars/RageOfFire/KoraBot?style=social)
+![GitHub](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
 
 # KoraBot
 
@@ -56,7 +56,7 @@ npm start
 
 ## Hỗ trợ
 
-https://img.shields.io/github/issues/RageOfFire/KoraBot
+![GitHub](https://img.shields.io/github/issues/RageOfFire/KoraBot)
 
 ## Tác giả
 
@@ -64,4 +64,4 @@ RageOfFire
 
 ## License
 
-https://img.shields.io/github/license/RageOfFire/KoraBot
+![GitHub](https://img.shields.io/github/license/RageOfFire/KoraBot)
