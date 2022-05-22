@@ -24,8 +24,8 @@
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [PG](https://www.npmjs.com/package/pg).
 * [PG-hstore](https://www.npmjs.com/package/pg-hstore).
-* request.
-* [Sequelize](https://www.npmjs.com/package/sequelize)
+* [Axios](https://www.npmjs.com/package/axios).
+* [Sequelize](https://www.npmjs.com/package/sequelize).
 
 ### Cài đặt
 
