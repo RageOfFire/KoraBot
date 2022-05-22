@@ -44,6 +44,7 @@ npm i
 TOKEN=TOKEN của bạn
 RAPIAPI=KEY API của bạn
 DATABASE_URL=url để kết nối với database của bạn (POSTGRESQL)
+OWNER=định dạnh chủ của bot là id user discord của bạn
 ```
 
 * Chạy chương trình
