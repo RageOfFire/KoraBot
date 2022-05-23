@@ -1,10 +1,13 @@
 const { MessageEmbed } = require('discord.js')
+const { getFiles } = require("../../util/functions")
+const fs = require("fs")
 module.exports = {
 	name: "help",
 	category: "info",
+	description: 'Xem hướng dẫn',
 	permissions: [],
 	devOnly: false,
-	run: async ({ client, message, args }) => {
+	run: async ({ client, message, prefix, args }) => {
 		let HelpCMD = 'Tất cả lệnh đều bắt đầu = (' + prefix + ')\n\n';
 		fs.readdirSync('./commands/').forEach((category) => {
 			let commands = getFiles(`./commands/${category}`, ".js")
