@@ -16,6 +16,12 @@
 
 1 discord bot giúp cho server discord của bạn luôn hoạt động.
 
+## Các chức năng
+
+* Nhiều minigame hấp dẫn
+* Trò chuyện với bot
+* ...
+
 ## Bắt đầu
 
 ### Yêu cầu
@@ -24,6 +30,7 @@
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [PG](https://www.npmjs.com/package/pg).
 * [PG-hstore](https://www.npmjs.com/package/pg-hstore).
+* [GameCord](https://discord-gamecord.js.org/)
 * [Axios](https://www.npmjs.com/package/axios).
 * [Sequelize](https://www.npmjs.com/package/sequelize).
 
@@ -44,7 +51,7 @@ npm i
 TOKEN=TOKEN của bạn
 RAPIAPI=KEY API của bạn
 DATABASE_URL=url để kết nối với database của bạn (POSTGRESQL)
-OWNER=định dạnh chủ của bot là id user discord của bạn
+PREFIX=phần bắt đầu để chạy từng câu lệnh
 ```
 
 * Chạy chương trình

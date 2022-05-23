@@ -3,6 +3,7 @@ const { hyperlink } = require('@discordjs/builders');
 module.exports = {
 	name: "secret",
 	category: "info",
+    description: 'Hmm verry sus',
 	permissions: [],
 	devOnly: false,
 	run: async ({ client, message, args }) => {

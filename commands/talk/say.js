@@ -4,6 +4,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = {
     name: "chat",
     category: "talk",
+    description: 'Trò chuyện với Kora',
     permissions: [],
     devOnly: false,
     run: async({ client, message, prefix, args }) => {
