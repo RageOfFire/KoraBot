@@ -30,7 +30,7 @@
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [PG](https://www.npmjs.com/package/pg).
 * [PG-hstore](https://www.npmjs.com/package/pg-hstore).
-* [GameCord](https://discord-gamecord.js.org/)
+* [GameCord](https://discord-gamecord.js.org/).
 * [Axios](https://www.npmjs.com/package/axios).
 * [Sequelize](https://www.npmjs.com/package/sequelize).
 
