@@ -20,6 +20,6 @@ module.exports = {
       winMessage: 'Đáp án đúng! Đó là **{answer}**',
       loseMessage: 'Đáp án sai! Câu trả lời đúng là **{answer}**',
       othersMessage: 'Bạn không có quyền sử dụng nút này!',
-    }).startGame();
+    }).startGame().catch((err) => {console.log(err)});
   }
 }

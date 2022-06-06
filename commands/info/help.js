@@ -25,6 +25,6 @@ module.exports = {
 			.setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
 			.setTimestamp()
 			.setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
-		message.reply({ embeds: [helpEmbed] })
+		message.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)});
 	}
 }

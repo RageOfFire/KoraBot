@@ -26,6 +26,6 @@ module.exports = {
             foods: ['🍎', '🍇', '🍊'],
             stopButton: 'Dừng',
             othersMessage: 'Bạn không có quyền sử dụng nút này!',
-          }).startGame();
+          }).startGame().catch((err) => {console.log(err)});
     }
 }

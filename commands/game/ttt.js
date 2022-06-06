@@ -33,7 +33,7 @@ module.exports = {
             drawMessage: 'Hòa!',
             winMessage: '{emoji} | **{winner}** đã chiến thắng!',
             gameEndMessage: 'Game kết thúc và có cát nịt :(',
-          }).startGame();
+          }).startGame().catch((err) => {console.log(err)});
         }
     }
 }

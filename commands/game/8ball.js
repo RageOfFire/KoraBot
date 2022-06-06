@@ -18,7 +18,7 @@ module.exports = {
                     title: '🎱 8Ball',
                     color: '#faa152'
                 }
-            }).startGame();
+            }).startGame().catch((err) => {console.log(err)});
         }
     }
 }

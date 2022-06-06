@@ -16,6 +16,6 @@ module.exports = {
             thinkMessage: '**Đang suy nghĩ...**',
             buttons: { option1: 'Lựa chọn 1', option2: 'Lựa chọn 2' },
             othersMessage: 'Bạn không có quyền sử dụng nút này!',
-        }).startGame();
+        }).startGame().catch((err) => {console.log(err)});
     }
 }

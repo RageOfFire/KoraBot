@@ -32,7 +32,7 @@ module.exports = {
                 askMessage: 'Ê {opponent}, {challenger} đang gạ solo Connect 4 nè!',
                 cancelMessage: 'Có vẻ người chơi từ chối chơi Connect4. \:(',
                 timeEndMessage: 'Người chơi không trả lời! Sập game',
-              }).startGame()
+              }).startGame().catch((err) => {console.log(err)});
         }
     }
 }
