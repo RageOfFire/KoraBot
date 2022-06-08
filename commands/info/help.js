@@ -16,6 +16,7 @@ module.exports = {
 				HelpCMD += `🔶${prefix}${command.name}: ${command.description}\n\n`
 			})
 		})
+		HelpCMD += 'Hoặc có thể sử dụng với /';
 		const helpEmbed = new MessageEmbed()
 			.setColor('#faa152')
 			.setTitle('Kora')

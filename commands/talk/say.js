@@ -33,7 +33,7 @@ module.exports = {
                     .setDescription(response.data)
                     .setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
                     .addFields(
-                        { name: 'Đang trò chuyện với', value: `🔊 ${message.author.toString()} 🔊`, inline: true },
+                        { name: 'Đang trò chuyện với', value: `🔊 ${message.author.username} 🔊`, inline: true },
                         { name: 'Điểm tương tác', value: `🧡 ${pointDB != null ? pointDB.points : 1} 🧡`, inline: true },
                     )
                     .setTimestamp()
