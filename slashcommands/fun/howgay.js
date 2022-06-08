@@ -1,10 +1,10 @@
 const run = async (client, interaction) => {
-    let user = interaction.options.getMember("user")
+    let user = interaction.options.getUser("user")
     if(!user) {
         interaction.reply(`Bạn có ${Math.floor(Math.random() * 100) + 1}% tỷ lệ gay`).catch((err) => {console.log(err)});
     }
     else {
-        interaction.reply(`${user.user.tag} có ${Math.floor(Math.random() * 100) + 1}% tỷ lệ gay`).catch((err) => {console.log(err)});
+        interaction.reply(`${user} có ${Math.floor(Math.random() * 100) + 1}% tỷ lệ gay`).catch((err) => {console.log(err)});
     }
 };
 
