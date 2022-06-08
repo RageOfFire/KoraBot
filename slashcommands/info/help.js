@@ -2,7 +2,8 @@ const { MessageEmbed } = require('discord.js')
 const { getFiles } = require("../../util/functions")
 const fs = require("fs")
 
-const run = async (client, interaction, prefix) => {
+const run = async (client, interaction) => {
+	let prefix = process.env.PREFIX;
 	let HelpCMD = 'Tất cả lệnh đều bắt đầu = (' + prefix + ')\n\n';
 	fs.readdirSync('./commands/').forEach((category) => {
 		let commands = getFiles(`./commands/${category}`, ".js")
