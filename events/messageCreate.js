@@ -6,6 +6,7 @@ module.exports = {
         if (!message.guild) return
         if (message.author.bot) return
         if (message.content.includes("@here") || message.content.includes("@everyone")) return;
+        if (!message.content.startsWith(prefix)) return;
         
         const args = message.content.slice(prefix.length).trim().split(/ +/g)
         const cmdstr = args.shift().toLowerCase()
