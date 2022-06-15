@@ -3,24 +3,24 @@ const { Points } = require('../../events/Points')
 const { MessageEmbed } = require('discord.js')
 
 const run = async (client, interaction) => {
-    let message = interaction.options.getString("message")
+    await interaction.deferReply();
+    const pointDB = await Points.findOne({ where: { 'nameid': interaction.user.id } });
+    let message = interaction.options.getString("message");
+    const response = await chat.GetItems(interaction.user.id, message, interaction.user.username, client.user.username, message);
     if (!message) {
         interaction.reply({content: "Bạn cần nhập nội dung", ephemeral: true})
     }
     else {
-        const pointDB = await Points.findOne({ where: { 'nameid': interaction.user.id } });
         if (pointDB != null) {
-            await Points.increment('points', { by: 1, where: { 'nameid': interaction.user.id } });
+           await Points.increment('points', { by: 1, where: { 'nameid': interaction.user.id } });
         }
         else {
-            await Points.create({
+           await Points.create({
                 nameid: interaction.user.id,
                 name: interaction.user.tag,
                 points: 1
             });
         }
-        const asyncChat = async () => {
-            const response = await chat.GetItems(interaction.user.id, message, interaction.user.username, client.user.username, message)
             const koraEmbed = new MessageEmbed()
                 .setColor('#faa152')
                 .setTitle('Kora')
@@ -35,11 +35,9 @@ const run = async (client, interaction) => {
                 .setTimestamp()
                 .setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
 
-            await interaction.reply({ embeds: [koraEmbed] }).catch((err) => {console.log(err)});
+            await interaction.editReply({ embeds: [koraEmbed] }).catch((err) => {console.log(err)});
         }
-        await asyncChat()
     }
-}
 
 module.exports = {
     name: "chat",
