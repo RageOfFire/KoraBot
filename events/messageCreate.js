@@ -6,6 +6,9 @@ module.exports = {
         if (!message.guild) return
         if (message.author.bot) return
         if (message.content.includes("@here") || message.content.includes("@everyone")) return;
+
+        const args = message.content.slice(prefix.length).trim().split(/ +/g)
+
         // chat command if reply bot
         if (!message.content.startsWith(prefix)) {
             if (message.mentions.has(client.user.id) && message.type == "REPLY") {
@@ -21,9 +24,9 @@ module.exports = {
                         console.error(err)
                 }
             }
+            else return
         }
         
-        const args = message.content.slice(prefix.length).trim().split(/ +/g)
         const cmdstr = args.shift().toLowerCase()
 
         let command = client.commands.get(cmdstr)
