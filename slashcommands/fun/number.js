@@ -1,5 +1,6 @@
 const run = async(client, interaction) => {
-    await interaction.reply(`Con số ngẫu nhiên của bạn là ${Math.floor(Math.random() * 100) + 1}`).catch((err) => {console.log(err)});
+    let number = interaction.options.getNumber('number');
+    interaction.reply(`Con số ngẫu nhiên của bạn là ${Math.floor(Math.random() * number + 1)}`).catch((err) => {console.log(err)});
 };
 
 module.exports = {
@@ -7,5 +8,13 @@ module.exports = {
     category: "fun",
     description: 'Đưa ra 1 số ngẫu nhiên từ 1-100',
     permissions: [],
-    devOnly: false, run
+    devOnly: false,
+    options: [
+        {
+            name: "number",
+            description: "Số tối đa",
+            type: "NUMBER",
+            required: true,
+        },
+    ], run
 }
