@@ -1,6 +1,5 @@
 const chat = require('../../util/api');
 const { Points } = require('../../events/Points')
-const { MessageEmbed } = require('discord.js')
 
 const run = async (client, interaction) => {
     await interaction.deferReply();
@@ -21,21 +20,7 @@ const run = async (client, interaction) => {
                 points: 1
             });
         }
-            const koraEmbed = new MessageEmbed()
-                .setColor('#faa152')
-                .setTitle('Kora')
-                .setURL('https://www.crystalgem.cf/')
-                .setAuthor({ name: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160', url: 'https://www.crystalgem.cf/' })
-                .setDescription(response.data)
-                .setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
-                .addFields(
-                    { name: 'Đang trò chuyện với', value: `🔊 ${interaction.user.username} 🔊`, inline: true },
-                    { name: 'Điểm tương tác', value: `🧡 ${pointDB != null ? pointDB.points : 1} 🧡`, inline: true },
-                )
-                .setTimestamp()
-                .setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
-
-            await interaction.editReply({ embeds: [koraEmbed] }).catch((err) => {console.log(err)});
+            interaction.editReply(response.data).catch((err) => {console.log(err)});
         }
     }
 

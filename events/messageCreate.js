@@ -6,12 +6,29 @@ module.exports = {
         if (!message.guild) return
         if (message.author.bot) return
         if (message.content.includes("@here") || message.content.includes("@everyone")) return;
+        // chat command if reply bot
+        if (!message.content.startsWith(prefix)) {
+            if (message.mentions.has(client.user.id) && message.type == "REPLY") {
+                const chatCommand = client.commands.get('chat');
+                try {
+                    await chatCommand.run({...bot, message, args })
+                } catch (err) {
+                    let errMSG = err.toString()
+                    if (errMSG.startsWith("?")) {
+                        errMSG = errMSG.slice(1)
+                        await message.reply(errMSG)
+                    } else
+                        console.error(err)
+                }
+            }
+        }
         
         const args = message.content.slice(prefix.length).trim().split(/ +/g)
         const cmdstr = args.shift().toLowerCase()
 
         let command = client.commands.get(cmdstr)
 
+        // If user send empty prefix
         if (message.content === prefix) {
             const helpCommand = client.commands.get('help');
             try {
@@ -25,22 +42,6 @@ module.exports = {
                     console.error(err)
             }
         }
-
-        if (message.mentions.has(client.user.id) && message.type == "REPLY" && !message.content.startsWith(prefix)) {
-            const chatCommand = client.commands.get('chat');
-            console.log(chatCommand);
-            try {
-                await chatCommand.run({...bot, message, args })
-            } catch (err) {
-                let errMSG = err.toString()
-                if (errMSG.startsWith("?")) {
-                    errMSG = errMSG.slice(1)
-                    await message.reply(errMSG)
-                } else
-                    console.error(err)
-            }
-        }
-        if (!message.content.startsWith(prefix)) return;
 
         if (!command) return
 
