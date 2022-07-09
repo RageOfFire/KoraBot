@@ -7,5 +7,5 @@ module.exports = {
     category: "info",
     description: 'Kiểm tra xem bot còn hoạt động không ?',
     permissions: [],
-    devOnly: false, run
+    devOnly: true, run
 }

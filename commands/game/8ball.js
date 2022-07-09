@@ -5,8 +5,8 @@ module.exports = {
     description: 'Game 8Ball',
     permissions: [],
     devOnly: false,
-    run: async ({ client, message, prefix, args }) => {
-        if (message.content == prefix + '8ball ' || message.content == prefix + '8ball') {
+    run: async function({ client, message, prefix, args }) {
+        if (message.content == prefix + this.name + ' ' || message.content == prefix + this.name) {
             message.reply('Bạn cần nhập nội dung')
         }
         else {

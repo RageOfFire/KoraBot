@@ -6,7 +6,7 @@ const run = async(client, interaction) => {
 
 module.exports = {
     name: "callhelp",
-    category: "info",
+    category: "talk",
     description: 'Kêu cứu :))))',
     permissions: [],
     devOnly: true,
