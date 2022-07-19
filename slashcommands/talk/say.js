@@ -4,7 +4,7 @@ const run = async(client, interaction) => {
 }
 
 module.exports = {
-    name: "callhelp",
+    name: "say",
     category: "talk",
     description: 'Yêu cầu bot nói gì đó',
     permissions: [],
