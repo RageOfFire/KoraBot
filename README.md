@@ -14,7 +14,8 @@
 
 ## Mô tả
 
-1 discord bot giúp cho server discord của bạn luôn hoạt động.
+* 1 discord bot giúp server bạn luôn có trò chuyện.
+* Mời bot vào server: [Invite](https://discord.com/api/oauth2/authorize?client_id=951682890297659412&permissions=277025508416&scope=applications.commands%20bot).
 
 ## Các chức năng
 
