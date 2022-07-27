@@ -1,4 +1,4 @@
-const run = async (client, interaction) => {
+const run = async ({ client, interaction, prefix }) => {
     let user = interaction.options.getUser("user")
     if(!user) {
         interaction.reply(`Bạn có ${Math.floor(Math.random() * 100) + 1}% tỷ lệ gay`).catch((err) => {console.log(err)});

@@ -1,6 +1,6 @@
 const { TwoZeroFourEight } = require('discord-gamecord')
 
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
   new TwoZeroFourEight({
     message: interaction,
     slash_command: true,

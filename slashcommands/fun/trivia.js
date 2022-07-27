@@ -1,6 +1,6 @@
 const { Trivia } = require('discord-gamecord')
 
-const run = async (client, interaction) => {
+const run = async ({ client, interaction, prefix }) => {
   const difficulty = ["easy", "medium", "hard"];
   const random = Math.floor(Math.random() * difficulty.length);
   new Trivia({

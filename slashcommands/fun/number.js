@@ -1,4 +1,4 @@
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
     let number = interaction.options.getNumber('number');
     interaction.reply(`Con số ngẫu nhiên của bạn là ${Math.floor(Math.random() * number + 1)}`).catch((err) => {console.log(err)});
 };

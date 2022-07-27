@@ -1,6 +1,6 @@
 const { Connect4 } = require('discord-gamecord')
 
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
   let user = interaction.options.getMember("user");
   if(!user) {
     interaction.reply({content: "Không thể bắt đầu trò chơi khi không có đối thủ", ephemeral: true});

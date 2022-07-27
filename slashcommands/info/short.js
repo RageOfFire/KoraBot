@@ -1,6 +1,6 @@
 const short = require('../../util/shortapi');
 let urlregex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig;
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
     await interaction.deferReply();
     let getUrl = interaction.options.getString("url");
     let check = getUrl.match(urlregex);

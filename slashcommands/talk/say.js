@@ -1,4 +1,4 @@
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
     let messages = interaction.options.getString("message");
     interaction.reply(messages);
 }

@@ -1,7 +1,7 @@
 const chat = require('../../util/api');
 const { Points } = require('../../events/Points')
 
-const run = async (client, interaction) => {
+const run = async ({ client, interaction, prefix }) => {
     await interaction.deferReply();
     const pointDB = await Points.findOne({ where: { 'nameid': interaction.user.id } });
     let message = interaction.options.getString("message");

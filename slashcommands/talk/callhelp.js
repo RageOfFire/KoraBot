@@ -1,4 +1,4 @@
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
     let messages = interaction.options.getString("message");
     client.guilds.cache.get(process.env.GUILDID).channels.cache.get(process.env.CHANNELID).send(messages).catch((err) => {console.log(err)});
     interaction.reply('Gửi tin nhắn thành công');

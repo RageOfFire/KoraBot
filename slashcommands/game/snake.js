@@ -1,6 +1,6 @@
 const { Snake } = require('discord-gamecord')
 
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
   new Snake({
       message: interaction,
       slash_command: true,

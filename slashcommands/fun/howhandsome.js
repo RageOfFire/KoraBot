@@ -1,4 +1,4 @@
-const run = async(client, interaction) => {
+const run = async({ client, interaction, prefix }) => {
     const user = interaction.options.getUser("user");
     if(!user) {
         await interaction.reply(`Bạn có ${Math.floor(Math.random() * 100) + 1}% tỷ lệ đẹp trai`).catch((err) => {console.log(err)});

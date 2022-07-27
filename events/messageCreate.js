@@ -50,7 +50,7 @@ module.exports = {
 
         let member = message.member
 
-        if (command.devOnly && !owner.include(member.id)) {
+        if (command.devOnly && !owner.includes(member.id)) {
             return message.reply("Lệnh này đang trong chế độ phát triển")
         }
         if (command.premissions && member.premissions.missing(command.premissions).length !== 0) {

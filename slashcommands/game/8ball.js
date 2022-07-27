@@ -1,6 +1,6 @@
 const { EightBall } = require('discord-gamecord')
 
-const run = async (client, interaction) => {
+const run = async ({ client, interaction, prefix }) => {
     let message = interaction.options.getString("message");
     if (!message) {
         interaction.reply({content: "Bạn cần nhập nội dung", ephemeral: true})

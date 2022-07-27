@@ -1,6 +1,6 @@
 const { WouldYouRather } = require('discord-gamecord')
 
-const run = async (client, interaction) => {
+const run = async ({ client, interaction, prefix }) => {
     new WouldYouRather({
         message: interaction,
         slash_command: true,
