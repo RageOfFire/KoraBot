@@ -29,5 +29,5 @@ const handleSlashCommand = (bot, interaction) => {
     }
     if(slashcmd.permissions && !interaction.member.permissions.has(slashcmd.permissions))
         return interaction.reply("You don't have permission")
-    slashcmd.run({...client, interaction, prefix});
+    slashcmd.run({client, interaction, prefix});
 }

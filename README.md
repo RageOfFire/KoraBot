@@ -29,11 +29,8 @@
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
-* [PG](https://www.npmjs.com/package/pg).
-* [PG-hstore](https://www.npmjs.com/package/pg-hstore).
 * [GameCord](https://discord-gamecord.js.org/).
 * [Axios](https://www.npmjs.com/package/axios).
-* [Sequelize](https://www.npmjs.com/package/sequelize).
 
 ### Cài đặt
 
@@ -51,7 +48,6 @@ npm i
 ```sh
 TOKEN=TOKEN của bạn
 RAPIAPI=KEY API của bạn
-DATABASE_URL=url để kết nối với database của bạn (POSTGRESQL)
 PREFIX=phần bắt đầu để chạy từng câu lệnh
 ```
 
