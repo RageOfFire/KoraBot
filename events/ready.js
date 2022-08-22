@@ -7,7 +7,8 @@ module.exports = {
             type: "PLAYING",
             url: "https://www.crystalgem.cf/"
         });
-        client.application.commands.set([...client.slashcommands.values()])
+        await client.application.commands.set([])
+        await client.application.commands.set([...client.slashcommands.values()])
         console.log("logged as " + bot.client.user.tag)
     }
 }

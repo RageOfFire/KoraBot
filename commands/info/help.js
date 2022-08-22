@@ -19,13 +19,13 @@ module.exports = {
 		HelpCMD += 'Hoặc có thể sử dụng với /';
 		const helpEmbed = new MessageEmbed()
 			.setColor('#faa152')
-			.setTitle('Kora')
+			.setTitle('Hướng dẫn')
 			.setURL('https://www.crystalgem.cf/')
-			.setAuthor({ name: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160', url: 'https://www.crystalgem.cf/' })
+			.setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL(), url: 'https://www.crystalgem.cf/' })
 			.setDescription(HelpCMD)
-			.setThumbnail('https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160')
+			.setThumbnail(client.user.displayAvatarURL())
 			.setTimestamp()
-			.setFooter({ text: 'Kora', iconURL: 'https://cdn.discordapp.com/avatars/951682890297659412/7e31923b9f673ca23c66336b2a97bead.webp?size=160' });
+			.setFooter({ text: `Được đề xuất bởi ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) });
 		message.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)});
 	}
 }

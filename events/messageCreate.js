@@ -11,20 +11,17 @@ module.exports = {
 
         // chat command if reply bot
         if (!message.content.startsWith(prefix)) {
-            if (message.mentions.has(client.user.id) && message.type == "REPLY") {
-                const chatCommand = client.commands.get('chat');
-                try {
-                    await chatCommand.run({...bot, message, args })
-                } catch (err) {
-                    let errMSG = err.toString()
-                    if (errMSG.startsWith("?")) {
-                        errMSG = errMSG.slice(1)
-                        await message.reply(errMSG)
-                    } else
-                        console.error(err)
-                }
+            const chatCommand = client.commands.get('chat');
+            try {
+                await chatCommand.run({...bot, message, args })
+            } catch (err) {
+                let errMSG = err.toString()
+                if (errMSG.startsWith("?")) {
+                    errMSG = errMSG.slice(1)
+                    await message.reply(errMSG)
+                } else
+                    console.error(err)
             }
-            else return
         }
         
         const cmdstr = args.shift().toLowerCase()

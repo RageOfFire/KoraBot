@@ -17,19 +17,12 @@
 * 1 discord bot giúp server bạn luôn có trò chuyện.
 * Mời bot vào server: [Invite](https://discord.com/api/oauth2/authorize?client_id=951682890297659412&permissions=277025508416&scope=applications.commands%20bot).
 
-## Các chức năng
-
-* Nhiều minigame hấp dẫn
-* Trò chuyện với bot
-* ...
-
 ## Bắt đầu
 
 ### Yêu cầu
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
-* [GameCord](https://discord-gamecord.js.org/).
 * [Axios](https://www.npmjs.com/package/axios).
 
 ### Cài đặt
