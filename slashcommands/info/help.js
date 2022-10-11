@@ -18,7 +18,7 @@ const run = async ({ client, interaction, prefix }) => {
 		.setURL('https://www.crystalgem.cf/')
 		.setAuthor({ name: client.user.username, iconURL:  client.user.displayAvatarURL(), url: 'https://www.crystalgem.cf/' })
 		.setDescription(HelpCMD)
-		.setThumbnail( client.user.displayAvatarURL())
+		.setThumbnail(client.user.displayAvatarURL())
 		.setTimestamp()
 		.setFooter({ text: `Được đề xuất bởi ${interaction.user.tag}`, iconURL: interaction.user.displayAvatarURL() });
 	interaction.reply({ embeds: [helpEmbed] }).catch((err) => {console.log(err)});

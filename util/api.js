@@ -9,8 +9,8 @@ module.exports = {
       from_name: author,
       to_name: client,
       situation: situation,
-      translate_from: 'vi',
-      translate_to: 'vi'
+      translate_from: 'auto',
+      translate_to: 'auto'
     },
     headers: {
       'content-type': 'application/json',
