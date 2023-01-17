@@ -2,7 +2,7 @@ const chat = require('../../util/api');
 module.exports = {
     name: "chat",
     category: "talk",
-    description: 'Trò chuyện với Kora',
+    description: 'Trò chuyện với Bot',
     permissions: [],
     devOnly: false,
     run: async function({ client, message, prefix, args }) {
