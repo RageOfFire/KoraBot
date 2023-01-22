@@ -12,7 +12,7 @@ module.exports = {
     options: [
         {
             name: "message",
-            description: "Kêu cứu!",
+            description: "Lời muốn nói",
             type: "STRING",
             required: true,
         },

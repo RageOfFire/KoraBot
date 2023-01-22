@@ -15,13 +15,13 @@ const run = async ({ client, interaction, prefix }) => {
 module.exports = {
     name: "chat",
     category: "talk",
-    description: 'Trò chuyện với Kora',
+    description: 'Trò chuyện với Bot',
     permissions: [],
     devOnly: false,
     options: [
         {
             name: "message",
-            description: "Đôi lời muốn nói với Kora",
+            description: "Đôi lời muốn nói với Bot",
             type: "STRING",
             required: true,
         },
