@@ -24,6 +24,7 @@
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [Axios](https://www.npmjs.com/package/axios).
+* [OpenAI](https://platform.openai.com/docs/introduction) (Tùy chọn)
 
 ### Cài đặt
 
@@ -35,6 +36,7 @@ npm i
 
 * Lấy TOKEN bot của bạn tại [đây](https://discord.com/developers/applications)!
 * Lấy API KEY tại đây [đây](https://rapidapi.com/waifuai/api/waifu/)!
+* Nếu sử dụng OpenAI API bạn sẽ cần lấy API tại [đây](https://platform.openai.com/account/api-keys)
 * Tạo 1 file **.env** ngay tại nơi có file **index.js**!
 * Trong file **.env**
 
@@ -42,6 +44,7 @@ npm i
 TOKEN=TOKEN của bạn
 RAPIAPI=KEY API của bạn
 PREFIX=phần bắt đầu để chạy từng câu lệnh
+OPENAI_API_KEY=Nếu bạn sử dụng API từ OpenAI thì thêm mục này
 ```
 
 * Chạy chương trình
