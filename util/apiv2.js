@@ -17,7 +17,7 @@ Kora: You can download it in here: https://rageoffire.itch.io/crystalgem`;
         model: "text-davinci-003",
         prompt: prompt,
         temperature: 0.5,
-        max_tokens: 999,
+        max_tokens: 9999, // Limit this for money cost
         top_p: 1.0,
         frequency_penalty: 0.5,
         presence_penalty: 0.0,
