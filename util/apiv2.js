@@ -20,8 +20,8 @@ Kora: You can download it in here: https://rageoffire.itch.io/crystalgem`;
         max_tokens: 999, // Limit this for money cost
         top_p: 1.0,
         frequency_penalty: 0,
-        presence_penalty: 0.6,
-        stop: ["Kora:", "You:"],
+        presence_penalty: 0,
+        // stop: ["Kora:", "You:"],
       })
       .then(response => {
         prompt += `${response.data.choices[0].text}\n`;
