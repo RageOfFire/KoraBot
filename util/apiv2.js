@@ -21,7 +21,7 @@ Kora: You can download it in here: https://rageoffire.itch.io/crystalgem`;
         top_p: 1.0,
         frequency_penalty: 0,
         presence_penalty: 0.6,
-        stop: ["Kora: ", "You:"],
+        stop: ["Kora:", "You:"],
       })
       .then(response => {
         prompt += `${response.data.choices[0].text}\n`;
