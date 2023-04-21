@@ -14,10 +14,10 @@ Kora: You can download it in here: https://rageoffire.itch.io/crystalgem`;
     return new Promise((resolve, reject) => {
       prompt += `You: ${message}\n`;
       openai.createCompletion({
-        model: "text-ada-001", // cheapest api for better and expensive using "text-davinci-003"
+        model: "text-davinci-003", // cheapest api for better and expensive using "text-davinci-003"
         prompt: prompt,
         temperature: 0.9,
-        max_tokens: 1989, // Limit this for money cost
+        max_tokens: 4097, // Limit this for money cost
         top_p: 1.0,
         frequency_penalty: 0,
         presence_penalty: 0.6,
