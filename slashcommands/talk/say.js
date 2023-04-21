@@ -1,6 +1,6 @@
 const run = async({ client, interaction, prefix }) => {
     let messages = interaction.options.getString("message");
-    interaction.reply(messages);
+    interaction.reply(messages).catch((err) => {console.log(err)});
 }
 
 module.exports = {

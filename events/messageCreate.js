@@ -18,7 +18,7 @@ module.exports = {
                 let errMSG = err.toString()
                 if (errMSG.startsWith("?")) {
                     errMSG = errMSG.slice(1)
-                    await message.reply(errMSG)
+                    await message.reply(errMSG).catch((err) => {console.log(err)});
                 } else
                     console.error(err)
             }
@@ -37,7 +37,7 @@ module.exports = {
                 let errMSG = err.toString()
                 if (errMSG.startsWith("?")) {
                     errMSG = errMSG.slice(1)
-                    await message.reply(errMSG)
+                    await message.reply(errMSG).catch((err) => {console.log(err)});
                 } else
                     console.error(err)
             }
@@ -48,10 +48,10 @@ module.exports = {
         let member = message.member
 
         if (command.devOnly && !owner.includes(member.id)) {
-            return message.reply("Lệnh này đang trong chế độ phát triển")
+            return message.reply("Lệnh này đang trong chế độ phát triển").catch((err) => {console.log(err)});
         }
         if (command.premissions && member.premissions.missing(command.premissions).length !== 0) {
-            return message.reply("Bạn không có quyền thực hiện lênh này")
+            return message.reply("Bạn không có quyền thực hiện lênh này").catch((err) => {console.log(err)});
         }
         try {
             await command.run({...bot, message, args })
@@ -59,7 +59,7 @@ module.exports = {
             let errMSG = err.toString()
             if (errMSG.startsWith("?")) {
                 errMSG = errMSG.slice(1)
-                await message.reply(errMSG)
+                await message.reply(errMSG).catch((err) => {console.log(err)});
             } else
                 console.error(err)
         }
