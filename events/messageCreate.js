@@ -3,14 +3,14 @@ module.exports = {
     run: async function runAll(bot, message) {
         const { client, prefix, owner } = bot
 
-        if (!message.guild) return
+        // if (!message.guild) return
         if (message.author.bot) return
         if (message.content.includes("@here") || message.content.includes("@everyone")) return;
 
         const args = message.content.slice(prefix.length).trim().split(/ +/g)
 
-        // chat command if reply bot
-        if (!message.content.startsWith(prefix)) {
+        // chat command if send message not a command or is a direct message
+        if (!message.content.startsWith(prefix) || message.channel.type == 'DM') {
             const chatCommand = client.commands.get('chat');
             try {
                 await chatCommand.run({...bot, message, args })
@@ -51,7 +51,7 @@ module.exports = {
             return message.reply("Lệnh này đang trong chế độ phát triển").catch((err) => {console.log(err)});
         }
         if (command.premissions && member.premissions.missing(command.premissions).length !== 0) {
-            return message.reply("Bạn không có quyền thực hiện lênh này").catch((err) => {console.log(err)});
+            return message.reply("Bạn không có quyền thực hiện lệnh này").catch((err) => {console.log(err)});
         }
         try {
             await command.run({...bot, message, args })

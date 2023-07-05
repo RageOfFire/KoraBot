@@ -1,5 +1,6 @@
 // un-comment to use OpenAI API
 // const { GetItems } = require('../../util/apiv2');
+
 const chat = require("../../util/api");
 module.exports = {
   name: "chat",
@@ -31,6 +32,7 @@ module.exports = {
       });
     }
       // Using OpenAI API
+
       // else {
       //     GetItems(chatMess)
       //     .then(outputText => {

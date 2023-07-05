@@ -1,5 +1,6 @@
 const chat = require("../../util/api");
 // un-comment to use OpenAI API
+
 // const { GetItems } = require('../../util/apiv2');
 
 const run = async ({ client, interaction, prefix }) => {
@@ -18,13 +19,14 @@ const run = async ({ client, interaction, prefix }) => {
     interaction.editReply("Error something went wrong :(((.").catch((err) => {console.log(err)});
   });
   // Using OpenAI API
-    GetItems(message)
-    .then(outputText => {
-      interaction.editReply(`${outputText}`).catch((err) => {console.log(err)});
-    }).catch(error => {
-      console.error(error);
-      interaction.editReply('Error something went wrong :(((.').catch((err) => {console.log(err)});
-    });
+  
+    // GetItems(message)
+    // .then(outputText => {
+    //   interaction.editReply(`${outputText}`).catch((err) => {console.log(err)});
+    // }).catch(error => {
+    //   console.error(error);
+    //   interaction.editReply('Error something went wrong :(((.').catch((err) => {console.log(err)});
+    // });
 };
 
 module.exports = {
