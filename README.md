@@ -72,7 +72,3 @@ npm run docker
 ## Author
 
 * [RageOfFire](https://github.com/RageOfFire)
-
-## License
-
-![GitHub](https://img.shields.io/github/license/RageOfFire/KoraBot)
