@@ -47,19 +47,19 @@ PREFIX=a-prefix-to-use-command
 OPENAI_API_KEY=your-openai-api-key
 ```
 
-* Run
+### Run
 
 ```sh
 npm start
 ```
 
-* Run [Docker](https://www.docker.com/)
+### Run [Docker](https://www.docker.com/)
 
-Build project:
+* Build project:
 ```sh
 npm run build
 ```
-Start project:
+* Start project:
 ```sh
 npm run docker
 ```
