@@ -1,6 +1,6 @@
 # KoraBot
 
-* Simple chatting DiscordBot using API.
+* Simple chatting DiscordBot using API support OpenAI (ChatGPT) API.
 
 ![GitHub language count](https://img.shields.io/github/languages/count/RageOfFire/KoraBot)
 ![Discord](https://img.shields.io/discord/752171524919918672)
@@ -12,53 +12,64 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
 
-## Mô tả
+## Description
 
-* 1 discord bot giúp server bạn luôn có trò chuyện.
-* Mời bot vào server: [Invite](https://discord.com/api/oauth2/authorize?client_id=951682890297659412&permissions=277025508416&scope=applications.commands%20bot).
+* a discord bot talking with other user help your server never get bored again.
+* Invite bots to the server: [Invite](https://discord.com/api/oauth2/authorize?client_id=951682890297659412&permissions=277025508416&scope=applications.commands%20bot).
 
-## Bắt đầu
+## Getting started
 
-### Yêu cầu
+### Required
 
 * [Discord.js](https://discord.js.org/#/).
 * [DotENV](https://www.npmjs.com/package/dotenv).
 * [Axios](https://www.npmjs.com/package/axios).
-* [OpenAI](https://platform.openai.com/docs/introduction) (Tùy chọn)
+* [OpenAI](https://platform.openai.com/docs/introduction) (Optional)
 
-### Cài đặt
+### Installed
 
 ```sh
 npm i
 ```
 
-### Chạy
+### Setup
 
-* Lấy TOKEN bot của bạn tại [đây](https://discord.com/developers/applications)!
-* Lấy API KEY tại đây [đây](https://rapidapi.com/waifuai/api/waifu/)!
-* Nếu sử dụng OpenAI API bạn sẽ cần lấy API tại [đây](https://platform.openai.com/account/api-keys)
-* Tạo 1 file **.env** ngay tại nơi có file **index.js**!
-* Trong file **.env**
+* Get your bot TOKEN in [here](https://discord.com/developers/applications)!
+* Get API Key [here](https://rapidapi.com/waifuai/api/waifu/)!
+* If using the OpenAI API you will need to get the API in [here](https://platform.openai.com/account/api-keys)
+* Copy **.env.example** and rename it to **.env** right in the place have file name **index.js**!
+* In **.env** edit:
 
 ```sh
-TOKEN=TOKEN của bạn
-RAPIAPI=KEY API của bạn
-PREFIX=phần bắt đầu để chạy từng câu lệnh
-OPENAI_API_KEY=Nếu bạn sử dụng API từ OpenAI thì thêm mục này
+TOKEN=your-discord-bot-token
+RAPIAPI=your-api-key
+PREFIX=a-prefix-to-use-command
+OPENAI_API_KEY=your-openai-api-key
 ```
 
-* Chạy chương trình
+* Run
 
 ```sh
 npm start
 ```
 
-## Hỗ trợ
+* Run [Docker](https://www.docker.com/)
+
+Build project:
+```sh
+npm run build
+```
+Start project:
+```sh
+npm run docker
+```
+
+## Support
 
 ![GitHub issues](https://img.shields.io/github/issues/RageOfFire/KoraBot)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/RageOfFire/KoraBot)
 
-## Tác giả
+## Author
 
 * [RageOfFire](https://github.com/RageOfFire)
 
