@@ -1,13 +1,13 @@
 {
     "name": "korabot",
-    "version": "2.0.5",
+    "version": "2.1.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node index.js",
         "build": "docker build -t kora-bot .",
-        "docker": "docker run -d --restart unless-stopped kora-bot"
+        "docker": "docker run -d --restart unless-stopped --name korabot kora-bot"
     },
     "author": "",
     "license": "ISC",
