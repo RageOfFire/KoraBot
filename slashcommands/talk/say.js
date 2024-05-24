@@ -1,3 +1,4 @@
+const { ApplicationCommandOptionType } = require('discord.js');
 const run = async({ client, interaction, prefix }) => {
     let messages = interaction.options.getString("message");
     interaction.reply(messages).catch((err) => {console.log(err)});
@@ -13,7 +14,7 @@ module.exports = {
         {
             name: "message",
             description: "Lời muốn nói",
-            type: "STRING",
+            type: ApplicationCommandOptionType.String,
             required: true,
         },
     ], run

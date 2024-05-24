@@ -1,11 +1,8 @@
-// un-comment to use OpenAI API
-// const { GetItems } = require('../../util/apiv2');
-
 // Old API
 // const { GetItems } = require("../../util/api");
 
-// un-comment to use self host API
-// const { GetPromts } = require("../../util/apiv3");
+// un-comment to use Gemini API
+const { GetItems } = require("../../util/api-gemini");
 
 module.exports = {
   name: "chat",
@@ -24,41 +21,31 @@ module.exports = {
     }
 
     // Old API
-    else {
-      await GetItems(
-        message.author.id,
-        chatMess,
-        message.author.username,
-        client.user.username,
-        chatMess
-      ).then(response => {
-        message.channel.send(response.data).catch((err) => { console.log(err) });
-      }).catch(error => {
-        console.error(error);
-        message.reply("Error something went wrong :(((.").catch((err) => { console.log(err) });
-      })
-    }
-
-    // Using OpenAI API
     // else {
-    //   GetItems(chatMess)
-    //     .then(outputText => {
-    //       message.channel.send(`${outputText}`).catch((err) => { console.log(err) });
-    //     })
-    //     .catch(error => {
-    //       console.error(error);
-    //       message.reply('Error something went wrong :(((.').catch((err) => { console.log(err) });
-    //     });
-    // }
-
-    // API v3
-    // else {
-    //   await GetPromts(chatMess, message.author.username).then(response => {
-    //     message.channel.send(response.data.results[0].text).catch((err) => { console.log(err); });
+    //   await GetItems(
+    //     message.author.id,
+    //     chatMess,
+    //     message.author.username,
+    //     client.user.username,
+    //     chatMess
+    //   ).then(response => {
+    //     message.channel.send(response.data).catch((err) => { console.log(err) });
     //   }).catch(error => {
     //     console.error(error);
     //     message.reply("Error something went wrong :(((.").catch((err) => { console.log(err) });
     //   })
     // }
+
+    // Using Gemini API
+    else {
+      await GetItems(chatMess)
+        .then(outputText => {
+          message.channel.send(`${outputText}`).catch((err) => { console.log(err) });
+        })
+        .catch(error => {
+          console.error(error);
+          message.reply('Error something went wrong :(((.').catch((err) => { console.log(err) });
+        });
+    }
   },
 };

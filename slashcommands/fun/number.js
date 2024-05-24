@@ -1,3 +1,4 @@
+const { ApplicationCommandOptionType } = require('discord.js');
 const run = async({ client, interaction, prefix }) => {
     let number = interaction.options.getNumber('number');
     interaction.reply(`Con số ngẫu nhiên của bạn là ${Math.floor(Math.random() * number + 1)}`).catch((err) => {console.log(err)});
@@ -13,7 +14,7 @@ module.exports = {
         {
             name: "number",
             description: "Số tối đa",
-            type: "NUMBER",
+            type: ApplicationCommandOptionType.Number,
             required: true,
         },
     ], run

@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { EmbedBuilder } = require('discord.js')
 const { getFiles } = require("../../util/functions")
 const fs = require("fs")
 
@@ -12,7 +12,7 @@ const run = async ({ client, interaction, prefix }) => {
 		})
 	})
 	HelpCMD += 'Hoặc có thể sử dụng với /';
-	const helpEmbed = new MessageEmbed()
+	const helpEmbed = new EmbedBuilder()
 		.setColor('#faa152')
 		.setTitle('Hướng dẫn')
 		.setURL('https://rageoffire.itch.io/crystalgem')

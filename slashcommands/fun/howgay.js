@@ -1,3 +1,4 @@
+const { ApplicationCommandOptionType } = require('discord.js');
 const run = async ({ client, interaction, prefix }) => {
     let user = interaction.options.getUser("user")
     if(!user) {
@@ -18,7 +19,7 @@ module.exports = {
         {
             name: "user",
             description: "Người nào đó",
-            type: "USER",
+            type: ApplicationCommandOptionType.User,
             required: false
         },
     ], run

@@ -1,17 +1,17 @@
-const Discord = require("discord.js")
+const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js")
 require("dotenv").config()
 
-const client = new Discord.Client({
+const client = new Client({
     intents: [
-        "GUILDS",
-        "GUILD_MESSAGES",
-        "GUILD_MEMBERS",
-        "DIRECT_MESSAGES",
-        "DIRECT_MESSAGE_REACTIONS",
-        "DIRECT_MESSAGE_TYPING"
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.DirectMessageReactions,
+        GatewayIntentBits.DirectMessageTyping
     ],
     partials: [
-        'CHANNEL'
+        Partials.Channel
     ]
 })
 
@@ -21,9 +21,9 @@ let bot = {
     owner: ["279932957769072641"]
 }
 
-client.commands = new Discord.Collection()
-client.events = new Discord.Collection()
-client.slashcommands = new Discord.Collection()
+client.commands = new Collection()
+client.events = new Collection()
+client.slashcommands = new Collection()
 
 client.loadEvents = (bot, reload) => require("./handlers/events")(bot, reload)
 client.loadCommands = (bot, reload) => require("./handlers/commands")(bot, reload)

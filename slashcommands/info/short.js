@@ -1,3 +1,4 @@
+const { ApplicationCommandOptionType } = require('discord.js');
 const short = require('../../util/shortapi');
 let urlregex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig;
 const run = async({ client, interaction, prefix }) => {
@@ -23,7 +24,7 @@ module.exports = {
         {
             name: "url",
             description: "URL",
-            type: "STRING",
+            type: ApplicationCommandOptionType.String,
             required: true,
         },
     ], run
