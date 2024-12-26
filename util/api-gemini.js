@@ -1,24 +1,18 @@
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
-// const { textgame, chatbot } = require("./history.js")
+const { kora } = require("./history.js")
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API);
 
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash",
-  generationConfig: {
-  candidateCount: 1,
-  // stopSequences: ["x"],
-  maxOutputTokens: 2000,
-  temperature: 2.0,
-}, });
+const model = genAI.getGenerativeModel({model: "gemini-1.5-flash",});
 
 async function GetItems(message) {
 
-  // const generationConfig = {
-  //   temperature: 2,
-  //   topP: 0.95,
-  //   topK: 64,
-  //   maxOutputTokens: 2000,
-  //   responseMimeType: "text/plain",
-  // };
+  const generationConfig = {
+    temperature: 2,
+    topP: 0.95,
+    topK: 40,
+    maxOutputTokens: 8192,
+    responseMimeType: "text/plain",
+  };
 
   // const safetySettings = [
   //   {
@@ -39,19 +33,19 @@ async function GetItems(message) {
   //   },
   // ];
 
-  // const chatSession = model.startChat({
-  //   generationConfig,
-  //   safetySettings,
-  //   history: [
-  //     {
-  //       role: "user",
-  //       parts: chatbot
-  //     },
-  //   ],
-  // });
+  const chatSession = model.startChat({
+    generationConfig,
+    history: [
+      {
+        role: "user",
+        parts: [
+          {text: kora},
+        ],
+      },
+    ],
+  });
 
-  // const result = await chatSession.sendMessage(message);
-  const result = await model.generateContent(message);
+  const result = await chatSession.sendMessage(message);
   return result.response.text();
 }
 
