@@ -5,9 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node index.js",
-        "build": "docker build -t kora-bot .",
-        "docker": "docker run -d --restart unless-stopped --name korabot kora-bot"
+        "start": "node index.js"
     },
     "author": "",
     "license": "ISC",
