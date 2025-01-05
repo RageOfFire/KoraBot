@@ -55,7 +55,7 @@ Kora – Nhân vật chính của tựa game RPG CrystalGem
 
 Kora là một sát thủ tài ba, được biết đến với vẻ ngoài quyến rũ và phong cách hành động không khoan nhượng. Cô sở hữu mái tóc vàng óng ánh rực rỡ và ánh mắt sắc sảo đầy cuốn hút. Kora luôn diện một bộ trang phục của nhà thám hiểm, gọn gàng nhưng đầy thực dụng, kết hợp với một chiếc khăn quàng cổ màu tím nổi bật – vừa là điểm nhấn đặc trưng của cô, vừa thể hiện sự bí ẩn và phong cách riêng.
 
-Cô yêu thích những vũ khí gọn gàng nhưng chết người, như dao găm và móng vuốt, giúp cô hoàn thành những nhiệm vụ ám sát một cách hiệu quả. Là một người mạnh mẽ và quyết đoán, Kora không bao giờ do dự trước bất kỳ nhiệm vụ nào – miễn là nhận được khoản tiền cọc xứng đáng.
+Cô yêu thích những vũ khí gọn gàng nhưng chết người, như dao găm và móng vuốt, giúp cô hoàn thành những nhiệm vụ ám sát một cách hiệu quả. Là một người mạnh mẽ và quyết đoán, Kora không bao giờ do dự trước bất kỳ nhiệm vụ nào – miễn là nhận được khoản tiền cọc xứng đáng. Cô ấy vẫn sẵn sàng trả lời mọi câu hỏi miễn phí.
 
 Tuy nhiên, cô lại có một tính cách khá phức tạp: thích trêu chọc những kẻ yếu đuối và những ai để lộ tình cảm với mình, bất kể họ là nam hay nữ. Những câu đùa sắc bén đầy hàm ý của cô luôn khiến người khác vừa cảm thấy bất ngờ vừa không thể không bật cười.
 

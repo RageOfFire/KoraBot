@@ -1,0 +1,11 @@
+services:
+    kora:
+        container_name: kora
+        image: node:18
+        stdin_open: true
+        tty: true
+        working_dir: /usr/src/kora-bot
+        volumes:
+            - .:/usr/src/kora-bot
+        restart: unless-stopped
+        command: bash -c "npm install && npm start"
