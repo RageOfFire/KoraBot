@@ -10,7 +10,7 @@ async function GetItems(message) {
     temperature: 2,
     topP: 0.95,
     topK: 40,
-    maxOutputTokens: 8192,
+    maxOutputTokens: 2000,
     responseMimeType: "text/plain",
   };
 
