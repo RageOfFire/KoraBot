@@ -4,6 +4,9 @@ services:
         image: node:18
         stdin_open: true
         tty: true
+        cpu_count: 1
+        cpu_percent: 25
+        mem_limit: 250m
         working_dir: /usr/src/kora-bot
         volumes:
             - .:/usr/src/kora-bot
