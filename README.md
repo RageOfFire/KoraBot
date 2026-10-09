@@ -12,6 +12,18 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/RageOfFire/KoraBot)
 ![GitHub package.json version (subfolder of monorepo)](https://img.shields.io/github/package-json/v/RageOfFire/KoraBot)
 
+---
+
+### 💼 Work With Me
+
+Enjoying this project or need something custom?
+
+I'm available for freelance work, whether it's **building something new, fixing issues, or improving existing projects**.
+
+[![Hire Me on Fiverr](https://img.shields.io/badge/Hire_Me_on-Fiverr-1DBF73?style=for-the-badge)](https://www.fiverr.com/s/vbby43Z)
+
+---
+
 ## Description
 
 * a discord bot talking with other user help your server never get bored again.
